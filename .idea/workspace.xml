@@ -23,6 +23,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1Pyd2QQIXUs87h4BPzV5pwKQNY9" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -48,31 +51,5 @@
         <item itemvalue="Application.Parser" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Parser.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Parser.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Parser.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="projectLinks" language="JAVA" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>
