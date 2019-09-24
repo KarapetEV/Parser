@@ -16,7 +16,7 @@ public class Parser {
 
     private static Document getPage(String url) throws IOException {
 
-        Document page = Jsoup.parse(new URL(url), 3000);
+        Document page = Jsoup.connect(url).timeout(0).get();
         return page;
     }
 
@@ -38,7 +38,7 @@ public class Parser {
 
     private static void findFiles() throws IOException {
         for (String url: projectLinks) {
-            Document page = Jsoup.parse(new URL(url), 3000);
+            Document page = Jsoup.connect(url).timeout(0).get();
             Elements aElements = page.select("a[class=panel-some-doc preview]");
             count += aElements.size();
         }
@@ -46,6 +46,7 @@ public class Parser {
 
     public static void main(String[] args) throws IOException {
         long start = System.currentTimeMillis();
+        System.out.println("Поехали!");
         Document page = getPage(baseUrl);
         String url = "";
         Element pagination = page.select("div[class=pagination]").first();
@@ -56,6 +57,7 @@ public class Parser {
             getLinks(page);
             findFiles();
             projectLinks.clear();
+            System.out.print("Страница: " + i + " / Файлов: " + count + "\r");
         }
         long stop = System.currentTimeMillis();
         double time = stop - start;
